@@ -24,31 +24,45 @@
             Studio
           </a>
 
-          <ul class="site-nav header-style">
-            <li class="item"><a href="./index.html" class="link current-index">Студия</a></li>
-            <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
-            <li class="item"><a href="" class="link">Контакты</a></li>
-          </ul>
-        </nav>
+          <button
+            type="button"
+            class="menu-button is-open"
+            aria-expanded="false"
+            data-menu-button
+            aria-controls="menu-container"
+          >
+            <svg width="24" height="19" aria-label="Переключатель мобильного меню">
+              <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+              <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
+            </svg>
+          </button>
 
-        <ul class="contacts header-style">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="mail">
-              <svg class="envelope-icon" width="16" height="12">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="item">
-            <a href="tel:380961111111" class="phone">
-              <svg class="phone-icon" width="10" height="15">
-                <use href="./images/sprite.svg#phone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <div class="menu-container" id="menu-container" data-menu>
+            <ul class="site-nav header-style">
+              <li class="item"><a href="./index.html" class="link current-index">Студия</a></li>
+              <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
+              <li class="item"><a href="" class="link">Контакты</a></li>
+            </ul>
+            <ul class="contacts header-style">
+              <li class="item">
+                <a href="mailto:info@devstudio.com" class="mail">
+                  <svg class="envelope-icon" width="16" height="12">
+                    <use href="./images/sprite.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="item mobile-header">
+                <a href="tel:380961111111" class="phone">
+                  <svg class="phone-icon" width="10" height="15">
+                    <use href="./images/sprite.svg#phone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
 
@@ -56,7 +70,7 @@
       <!-- Герой -->
 
       <section class="hero">
-        <div class="overlay">
+        <div class="overlay container">
           <h1 class="hero-title">
             Эффективные решения
             <br />
@@ -120,7 +134,7 @@
       </section>
 
       <!-- Чем мы занимаемся -->
-      <section class="section">
+      <section class="section section-none">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="we-list">
@@ -152,7 +166,27 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list">
             <li class="item">
-              <img src="./images/4team/member1.jpg" width="278" class="team-img" alt="John Smith" />
+              <picture class="team-img">
+                <source
+                  srcset="
+                    ./images/4team/team-mobile/member1-450.webp   450w,
+                    ./images/4team/team-mobile/member1-900.webp   900w,
+                    ./images/4team/team-mobile/member1-1350.webp 1350w
+                  "
+                  type="image/webp"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                />
+                <img
+                  srcset="
+                    ./images/4team/team-mobile/member1-450.jpg   450w,
+                    ./images/4team/team-mobile/member1-900.jpg   900w,
+                    ./images/4team/team-mobile/member1-1350.jpg 1350w
+                  "
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  src="./images/4team/team-mobile/member1-450.jpg"
+                  alt="John Smith"
+                />
+              </picture>
               <h3 class="names">John Smith</h3>
               <p class="profession">Product Designer</p>
               <ul class="icons-list">
@@ -186,13 +220,29 @@
                 </li>
               </ul>
             </li>
+
             <li class="item">
-              <img
-                src="./images/4team/member2.jpg"
-                width="278"
-                class="team-img"
-                alt="Marta Stewart"
-              />
+              <picture class="team-img">
+                <source
+                  srcset="
+                    ./images/4team/team-mobile/member2-450.webp   450w,
+                    ./images/4team/team-mobile/member2-900.webp   900w,
+                    ./images/4team/team-mobile/member2-1350.webp 1350w
+                  "
+                  type="image/webp"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                />
+                <img
+                  srcset="
+                    ./images/4team/team-mobile/member2-450.jpg   450w,
+                    ./images/4team/team-mobile/member2-900.jpg   900w,
+                    ./images/4team/team-mobile/member2-1350.jpg 1350w
+                  "
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  src="./images/4team/team-mobile/member2-450.jpg"
+                  alt="Marta Stewart"
+                />
+              </picture>
               <h3 class="names">Marta Stewart</h3>
               <p class="profession">Frontend Developer</p>
               <ul class="icons-list">
@@ -226,13 +276,29 @@
                 </li>
               </ul>
             </li>
+
             <li class="item">
-              <img
-                src="./images/4team/member3.jpg"
-                width="278"
-                class="team-img"
-                alt="Robert Jakis"
-              />
+              <picture class="team-img">
+                <source
+                  srcset="
+                    ./images/4team/team-mobile/member3-450.webp   450w,
+                    ./images/4team/team-mobile/member3-900.webp   900w,
+                    ./images/4team/team-mobile/member3-1350.webp 1350w
+                  "
+                  type="image/webp"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                />
+                <img
+                  srcset="
+                    ./images/4team/team-mobile/member3-450.jpg   450w,
+                    ./images/4team/team-mobile/member3-900.jpg   900w,
+                    ./images/4team/team-mobile/member3-1350.jpg 1350w
+                  "
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  src="./images/4team/team-mobile/member3-450.jpg"
+                  alt="Robert Jakis"
+                />
+              </picture>
               <h3 class="names">Robert Jakis</h3>
               <p class="profession">Marketing</p>
               <ul class="icons-list">
@@ -266,8 +332,29 @@
                 </li>
               </ul>
             </li>
+
             <li class="item">
-              <img src="./images/4team/member4.jpg" width="278" class="team-img" alt="Martin Doe" />
+              <picture class="team-img">
+                <source
+                  srcset="
+                    ./images/4team/team-mobile/member4-450.webp   450w,
+                    ./images/4team/team-mobile/member4-900.webp   900w,
+                    ./images/4team/team-mobile/member4-1350.webp 1350w
+                  "
+                  type="image/webp"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                />
+                <img
+                  srcset="
+                    ./images/4team/team-mobile/member4-450.jpg   450w,
+                    ./images/4team/team-mobile/member4-900.jpg   900w,
+                    ./images/4team/team-mobile/member4-1350.jpg 1350w
+                  "
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  src="./images/4team/team-mobile/member4-450.jpg"
+                  alt="Martin Doe"
+                />
+              </picture>
               <h3 class="names">Martin Doe</h3>
               <p class="profession">UI Designer</p>
               <ul class="icons-list">
@@ -415,13 +502,17 @@
           </form>
         </div>
       </div>
-      <p class="bottom">2020 | Developed by GoIT Students</p>
+      <!-- <p class="bottom">2020 | Developed by GoIT Students</p> -->
     </footer>
 
     <!-- Модальное окно -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button data-modal-close class="button-close"></button>
+        <button data-modal-close class="button-close">
+          <svg width="11" height="11">
+            <use class="modal-cross" href="./images/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
         <form class="form" autocomplete="off">
           <strong class="form-title">Оставьте свои данные, мы вам перезвоним</strong>
 
@@ -469,5 +560,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

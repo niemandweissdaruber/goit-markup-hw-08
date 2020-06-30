@@ -1,0 +1,39 @@
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.clients-list .item {
+  flex-basis: calc((100% - 4 * 15px) / 2);
+
+  margin: 15px;
+}
+
+.icon-bg-clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 210px;
+  height: 90px;
+
+  border: 1px solid #afb1b8;
+  color: #afb1b8;
+  border-radius: 4px;
+
+  @include transition(color);
+  @include transition(border);
+  @include transition(transform);
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    color: $accent-color;
+
+    transform: scale(1.2);
+  }
+}
+
+.icon-clients {
+  fill: currentColor;
+}

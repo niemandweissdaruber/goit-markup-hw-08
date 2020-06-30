@@ -1,0 +1,25 @@
+.invisible-title {
+  @extend %visually-hidden;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-title {
+  margin-bottom: 30px;
+
+  color: $secondary-text-color;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.section-none {
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+}

@@ -1,0 +1,18 @@
+.logo {
+  font-size: 24px;
+  line-height: 1.16;
+  @extend %logo-style;
+}
+
+.logo-color {
+  color: $accent-color;
+}
+
+.logo-footer {
+  padding: 0px;
+  margin-right: 0px;
+
+  @extend %logo-style;
+
+  color: $white-color;
+}

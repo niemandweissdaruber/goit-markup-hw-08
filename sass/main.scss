@@ -1,0 +1,18 @@
+@import './utils/variables';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './base/general';
+
+@import './components/container';
+@import './components/page-header';
+@import './components/logo';
+@import './components/mobile-menu';
+@import './components/footer';
+
+@import './components/hero';
+@import './components/main-buttons';
+@import './components/sections';
+@import './components/advantages-section';
+@import './components/_team-section';
+@import './components/clients-section';
+@import './components/modal';

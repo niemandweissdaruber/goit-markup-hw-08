@@ -1,0 +1,35 @@
+.advantages-title {
+  display: flex;
+  justify-content: center;
+
+  margin: 0px;
+  margin-bottom: 10px;
+
+  color: $secondary-text-color;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.icon-bg {
+  max-width: 450px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.advantages-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.advantages-list .item + .item {
+  margin-top: 30px;
+}

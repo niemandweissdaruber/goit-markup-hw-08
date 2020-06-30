@@ -1,0 +1,227 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 93px 15px;
+  overflow-y: scroll;
+
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+
+  @include transition(opacity);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  padding: 40px;
+
+  background-color: $white-color;
+
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+
+  //   @media (min-width: 600px) {
+  //     position: absolute;
+  //     top: 50%;
+  //     left: 50%;
+  //     transform: translate(-50%, -50%);
+  //     max-width: 500px;
+  //     width: 100%;
+  //   }
+}
+
+.button-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  outline: none;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $white-color;
+
+  border-radius: 50%;
+
+  transform: translate(25%, -25%) scale(1);
+  @include transition(transform);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
+    transform: translate(25%, -25%) scale(1.2);
+  }
+}
+
+.modal-cross {
+  fill: currentColor;
+
+  .button-close:hover &,
+  .button-close:focus & {
+    color: $accent-color;
+  }
+}
+
+// РАЗМЕТКА ФОРМЫ
+
+.form-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 30px;
+
+  color: $secondary-text-color;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 28px;
+}
+
+.form-input {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+  }
+}
+
+.form-field input {
+  &:not([type='checkbox']) {
+    width: 100%;
+    max-width: 370px;
+    height: 40px;
+
+    padding-left: 41px;
+  }
+}
+
+.form-field .comment-input {
+  resize: none;
+
+  width: 100%;
+  max-width: 370px;
+  height: 120px;
+  padding: 16px 12px;
+}
+
+.form-field label {
+  color: $primary-text-color;
+}
+
+.checkbox-area a {
+  color: $accent-color;
+  border-bottom: 1px solid $accent-color;
+}
+
+.form button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+
+  transform: translateY(-50%);
+  @include transition(transform);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 19px;
+  transform: translate(-50%, -50%);
+
+  .form-input:focus ~ & {
+    fill: $accent-color;
+  }
+}
+
+.form-field:focus-within > .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  color: $accent-color;
+  transform: translate(-30px, -42px) scale(0.9);
+}
+
+.comment-label {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+
+  @include transition(transform);
+
+  .form-field:focus-within > &,
+  .form-input:not(:placeholder-shown) + & {
+    color: $accent-color;
+    transform: translate(-8px, -37px) scale(0.9);
+  }
+}
+
+// ЧЕКБОКС
+
+.checkbox-area {
+  position: relative;
+}
+
+.checkbox {
+  position: absolute;
+  margin-top: 4px;
+
+  width: 15.9px;
+  height: 15px;
+
+  border: 2px solid $secondary-text-color;
+  border-radius: 2px;
+
+  @include transition(background-color);
+
+  .check-input:checked + & {
+    background-image: url(../images/form/check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    background-color: $accent-color;
+    border-color: transparent;
+
+    border-radius: 2px;
+  }
+}
+
+.check-input {
+  @extend %visually-hidden;
+}
+
+.policy {
+  font-size: 12px;
+  line-height: 1.16;
+  margin-left: 22px;
+}
