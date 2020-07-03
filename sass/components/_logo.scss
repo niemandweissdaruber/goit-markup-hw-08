@@ -2,6 +2,10 @@
   font-size: 24px;
   line-height: 1.16;
   @extend %logo-style;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .logo-color {
@@ -15,4 +19,9 @@
   @extend %logo-style;
 
   color: $white-color;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    justify-content: center;
+  }
 }

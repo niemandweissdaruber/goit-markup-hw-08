@@ -3,8 +3,14 @@
 }
 
 .section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+  }
 }
 
 .section-title {
@@ -16,10 +22,21 @@
   font-size: 28px;
   line-height: 1.17;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .section-none {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 1199px) {
     display: none;
+  }
+}
+
+.advantages,
+.add-padding {
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
   }
 }

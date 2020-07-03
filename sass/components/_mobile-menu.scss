@@ -5,6 +5,10 @@
   border: none;
   background-color: transparent;
   padding: 10px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .icon-menu {
@@ -46,5 +50,12 @@
 
   &.is-open {
     display: block;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: inline-flex;
+    position: static;
+    height: 80px;
+    background-color: transparent;
   }
 }

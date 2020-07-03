@@ -11,6 +11,11 @@ a.phone {
   background-color: rgba(255, 255, 255, 0.85);
 
   border-bottom: 1px solid #ececec;
+
+  @media screen and (min-width: 768px) {
+    height: 80px;
+    position: static;
+  }
 }
 
 .header-style {
@@ -20,6 +25,16 @@ a.phone {
   font-size: 18px;
   line-height: 1.16;
   letter-spacing: 0.02em;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.16;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .header-style .link,
@@ -42,23 +57,70 @@ a.phone {
   align-items: center;
   justify-content: space-between;
   height: 60px;
+
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
 }
 
 .site-nav {
   margin-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    margin-left: 81px;
+    display: flex;
+
+    font-size: 14;
+    line-height: 1.14;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 85px;
+  }
 }
 
 .site-nav .item + .item {
   margin-top: 50px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    margin-left: 50px;
+  }
 }
 
 .contacts {
   margin-top: 60px;
   margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 21px;
+    margin-bottom: 21px;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contacts .mobile-header {
   margin-top: 16px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+  }
+}
+
+.contacts .item + .item {
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
 }
 
 // .site-nav .link {
@@ -84,4 +146,27 @@ a.phone {
 .phone-icon {
   margin-right: 5px;
   fill: currentColor;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 8px;
+    margin-bottom: 2px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
+}
+
+.envelope-icon {
+  @media screen and (min-width: 1200px) {
+    margin-top: 2px;
+  }
+}
+
+.mail,
+.phone {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 }
