@@ -721,6 +721,7 @@ footer {
 
 @media screen and (min-width: 1200px) {
   .overlay {
+    height: 600px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url("../images/desktop-hero-1600.jpg");
     background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/desktop-hero-1600.jpg");
   }
