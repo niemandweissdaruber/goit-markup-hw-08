@@ -3,7 +3,13 @@
 
   text-align: center;
 
-  background-color: rgb(141, 141, 141);
+  @media screen and (max-width: 1599px) {
+    background-color: rgb(141, 141, 141);
+  }
+
+  @media screen and (min-width: 1600px) {
+    background-color: #fff;
+  }
 }
 
 .hero-title {
@@ -19,6 +25,11 @@
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .overlay {

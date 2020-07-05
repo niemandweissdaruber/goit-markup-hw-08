@@ -327,6 +327,12 @@ a.phone {
   color: #2196f3;
 }
 
+@media screen and (max-width: 767px) {
+  .logo-color {
+    margin-right: -10px;
+  }
+}
+
 .logo-footer {
   padding: 0px;
   margin-right: 0px;
@@ -469,7 +475,7 @@ footer {
   .socials-container {
     position: absolute;
     top: 0;
-    left: 30%;
+    left: 26%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -528,7 +534,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 @media screen and (max-width: 1199px) {
@@ -562,12 +568,6 @@ footer {
     margin: 0;
     margin-top: 5px;
     margin-bottom: 20px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .subscribe-container {
-    margin-right: -50px;
   }
 }
 
@@ -662,7 +662,18 @@ footer {
 .hero {
   padding: 0px;
   text-align: center;
-  background-color: #8d8d8d;
+}
+
+@media screen and (max-width: 1599px) {
+  .hero {
+    background-color: #8d8d8d;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .hero {
+    background-color: #fff;
+  }
 }
 
 .hero-title {
@@ -675,6 +686,13 @@ footer {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .overlay {
@@ -942,6 +960,9 @@ footer {
   .team-list > .item {
     margin-bottom: 30px;
   }
+  .team-list > .item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1096,7 +1117,6 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 93px 15px;
   overflow-y: scroll;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.2);
@@ -1124,6 +1144,7 @@ footer {
 .modal {
   position: relative;
   padding: 40px;
+  max-width: 450px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
