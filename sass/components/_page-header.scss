@@ -89,6 +89,15 @@ a.phone {
   }
 }
 
+.site-nav .link {
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
 .contacts {
   margin-top: 60px;
   margin-bottom: 60px;
@@ -134,7 +143,7 @@ a.phone {
     display: inline-block;
     position: absolute;
     right: 0;
-    bottom: -8px;
+    bottom: 0px;
     width: 100%;
     height: 4px;
     background-color: $accent-color;
