@@ -513,7 +513,18 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 102px;
+}
+
+@media screen and (max-width: 767px) {
+  .socials-list {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .socials-list {
+    margin-bottom: 102px;
+  }
 }
 
 .socials-list .item + .item {
