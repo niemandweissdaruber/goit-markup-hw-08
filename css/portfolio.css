@@ -279,6 +279,12 @@ a.phone {
   border-radius: 2px;
 }
 
+@media screen and (max-width: 767px) {
+  .site-nav .link.current-index::after {
+    bottom: -8px;
+  }
+}
+
 .envelope-icon,
 .phone-icon {
   margin-right: 5px;

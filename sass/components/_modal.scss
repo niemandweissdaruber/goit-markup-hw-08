@@ -35,7 +35,9 @@
 .modal {
   position: relative;
   padding: 40px;
-  max-width: 450px;
+
+  width: 450px;
+  height: 609px;
 
   background-color: $white-color;
 
@@ -104,6 +106,10 @@
 }
 
 // РАЗМЕТКА ФОРМЫ
+
+.form {
+  height: 419px;
+}
 
 .form-title {
   display: flex;
@@ -176,6 +182,10 @@
   display: flex;
   justify-content: center;
   margin-top: 30px;
+
+  @media screen and (max-width: 477px) {
+    margin-top: 15px;
+  }
 }
 
 .form-label {

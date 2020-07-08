@@ -148,6 +148,10 @@ a.phone {
     height: 4px;
     background-color: $accent-color;
     border-radius: 2px;
+
+    @media screen and (max-width: 767px) {
+      bottom: -8px;
+    }
   }
 }
 
